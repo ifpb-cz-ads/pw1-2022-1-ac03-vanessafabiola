@@ -1,0 +1,22 @@
+
+<div>
+<h1 class ="d-flex justify-content-center mb-3 mt-5">Boas-vindas ao<span style="color:#ff4d6d"> Mini Bios!</span></h1>
+
+{{#each users}}
+<div class ="d-flex justify-content-around card-group ">
+     <div class="card border-dark mb-2" style="max-width: 30rem;">
+        <div class="card-header">
+            <a class="card-body " href="/users/{{getUsername this}}">
+                {{getName this}}
+            </a>
+        </div>
+    {{#if (getBio this)}}
+        <div class="card-body">
+            {{getBio this}}        
+        </div>
+    {{/if}}
+    </div> 
+</div>
+  
+{{/each}}
+</div>

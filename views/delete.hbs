@@ -1,0 +1,11 @@
+<h1 class="mb-3 mt-5">Tem certeza que deseja excluir seu perfil?</h1>
+
+<div class="d-flex flex-column justify-content">
+    <form action="/delete" method="POST">
+        <input name="confirmationPassword" type="password" class="form-control" style="width:25% ;" placeholder="Confirme sua senha" required>
+        <button class="btn btn text-white mb-3 mt-2" style="background-color:#800f2f; margin-right:20px;">Excluir Perfil</button>
+    </form>
+    <a href="/users/{{getUsername currentUser}}">
+            <button class="btn btn text-white" style="background-color:#ff4d6d; ">Voltar</button>
+        </a>
+</div>

@@ -1,0 +1,15 @@
+<div class="card mb-3 mt-5" >
+<h1 class="mb-3 mt-3" style="margin-left:15px;">{{getName user}}</h1>
+<h2 style="font-size:20px;margin-left:15px;">Cadastrou-se em {{getCreatedAt user}}</h2>
+
+{{#if (getBio user)}}
+    <p style="margin-left:15px;"> &bull;{{getBio user}}</p>
+{{/if}}
+</div>
+
+{{#if (isOwnProfile currentUser user)}}
+    <div class="pull-right mb-3 mt-3">
+        <a href="/edit" class="btn text-white" style="background-color:#ff4d6d;">Atualize seu perfil</a>
+        <a href="/delete" class="btn text-white" style="background-color:#800f2f ;">Excluir Perfil</a>
+    </div>
+{{/if}}

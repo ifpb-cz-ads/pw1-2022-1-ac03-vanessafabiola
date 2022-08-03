@@ -1,0 +1,13 @@
+<h1 class="mb-3 mt-5">Atualize seu perfil</h1>
+
+<form action="/edit" method="post">
+    <label for="displayname" class="form-label ">
+        Nome do Perfil: Como os outros usuários devem te chamar?
+    </label>
+    <input name="displayname" type="text" class="form-control" placeholder="Nome de exibição" value="{{getName currentUser}}">
+    <label for="bio" class="form-label">
+        Bio: O que você quer que os outros saibam sobre você?
+    </label>
+    <textarea name="bio" class="form-control" placeholder="Conte um pouco sobre você!">{{getBio currentUser}}</textarea>
+    <input type="submit" value="Atualizar" class="btn btn btn-block text-white mb-3 mt-3" style="background-color:#c9184a ;">
+</form>
